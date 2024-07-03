@@ -1,0 +1,18 @@
+#!/user/bin/env bash
+#install nginx
+
+#update ubuntu -y for yes in all questions -qq to be quiet
+sudo apt-get update -y -qq
+#install nginx
+sudo apt-get install nginx -y
+#start nginx
+sudo service nginx start
+#put it in port 80
+sudo ufw allow 'Nginx HTTP'
+
+sudo chown -R "$USER":"$USER" /var/www/html
+sudo chmod -R 755 /var/www
+
+echo "Hello World!" | dd status=none of=/var/www/html/index.nginx-debian.html
+
+sudo service nginx restart
