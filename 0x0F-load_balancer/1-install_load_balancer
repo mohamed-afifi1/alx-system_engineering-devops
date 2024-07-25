@@ -17,5 +17,7 @@ backend www-backend
         server 483184-web-02 54.160.87.111:80 check
 ' >> /etc/haproxy/haproxy.cfg
 
+echo "ENABLE=1" >> /etc/haproxy/haproxy
+
 # Restart HAproxy service
 sudo service haproxy restart
