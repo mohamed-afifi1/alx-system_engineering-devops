@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
 # sudo service nginx start
-sudo apt update -y
-sudo install nginx -y
-sudo service nginx start
+cat /etc/nginx/sites-available/default > /etc/nginx/sites-enabled/default
