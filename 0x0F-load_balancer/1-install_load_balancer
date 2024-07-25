@@ -6,6 +6,8 @@
 sudo apt-get update -y
 sudo apt-get install haproxy -y
 
+sudo echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
+
 # Configure HAProxy
 config=\
 "frontend test80
@@ -21,9 +23,6 @@ backend back80
 
 sudo echo "$config" | sudo tee -a /etc/haproxy/haproxy.cfg
 
-sudo echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
 
 #start haproxy
 sudo service haproxy start
-
-echo "web-01", "web-02"
