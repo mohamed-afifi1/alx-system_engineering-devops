@@ -25,3 +25,5 @@ sudo echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
 
 #start haproxy
 sudo service haproxy start
+
+echo "web-01", "web-02"
