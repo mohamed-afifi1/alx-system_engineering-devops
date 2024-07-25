@@ -18,7 +18,7 @@ backend back80
         balance roundrobin
 "
 
-sudo echo "$config" | sudo tee -a /etc/haproxy/haproxy.cfg
+sudo echo "$config" | sudo tee -a test
 
 # Start HAProxy
 sudo service haproxy start
