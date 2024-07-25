@@ -13,8 +13,8 @@ config=\
         default_backend back80
 
 backend back80
-        server web-01 52.87.234.190:80 check
-        server web-02 54.160.87.111:80 check
+        server 483184-web-01 52.87.234.190:80 check
+        server 483184-web-02 54.160.87.111:80 check
         balance roundrobin
 "
 
