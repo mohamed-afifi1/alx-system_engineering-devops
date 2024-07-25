@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# run nginx as nginx
+service nginx stop
+
+# replace the default user with nginx
+sed -i "s/user */user nginx;" /etc/nginx/nginx.conf
+
+sudo -u nginx service nginx start
