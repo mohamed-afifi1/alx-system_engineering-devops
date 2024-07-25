@@ -1,3 +1,4 @@
+# install nginx
 exce {'command':
 command  => 'sudo apt-get -y update
 sudo apt-get -y install nginx
