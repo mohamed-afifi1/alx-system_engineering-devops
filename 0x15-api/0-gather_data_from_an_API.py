@@ -18,4 +18,4 @@ if __name__ == '__main__':
         employee.get('name'), len(complete), len(todos)))
 
     for task in complete:
-        print(f"     {task}")
+        print("\t {}".format(task))
