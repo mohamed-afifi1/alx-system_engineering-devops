@@ -9,6 +9,7 @@ if __name__ == '__main__':
     employee = requests.get(f"{url}/users/{id}").json()
     todos = requests.get(f"{url}/todos?userId={id}").json()
     complete = []
+
     for task in todos:
         if task.get("completed") is True:
             complete.append(task.get("title"))
