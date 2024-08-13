@@ -5,7 +5,8 @@ import requests
 
 def recurse(subreddit, hot_list=[], after=''):
     """recursive hot posts of reddit"""
-    url = "https://www.reddit.com/r/{}/hot.json?after={}".format(subreddit, after)
+    url = "https://www.reddit.com/r/{}/hot.json?after={}".format(
+        subreddit, after)
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
