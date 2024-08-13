@@ -5,7 +5,7 @@ import requests
 
 def top_ten(subreddit):
     """Fetch and display the top ten posts from a given subreddit."""
-    url = f"https://www.reddit.com/r/{subreddit}/hot.json?limit=10"
+    url = "https://www.reddit.com/r/{}/hot.json?limit=10".format(subreddit)
     headers = {"User-Agent": "top_posts"}
 
     response = requests.get(url, headers=headers, allow_redirects=False)
