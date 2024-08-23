@@ -1,6 +1,9 @@
 server {
     listen 80 default_server;
     listen [::]:80 default_server;
+
+    server_name 52.87.234.190
+    
     add_header X-Served-By 483184-web-01;
     root   /var/www/html;
     index  index.html index.htm;
@@ -17,8 +20,8 @@ server {
     }
 
     #airbnb
-        location = /airbnb-onepage/ {
-                include proxy_params;
-                proxy_pass http://127.0.0.1:5000/airbnb-onepage;
+    location = /airbnb-onepage/ {
+            include proxy_params;
+            proxy_pass http://127.0.0.1:5000/airbnb-onepage;
         }
 }
